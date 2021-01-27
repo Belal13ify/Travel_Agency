@@ -63,7 +63,7 @@ void main() {
         break;
       case 5:
         {
-          print('You have chosen to Reserve a trip\n');
+          print('You have chosen to Search for a trip\n');
           trip.searchTrip();
         }
         break;
