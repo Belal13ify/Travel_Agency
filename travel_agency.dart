@@ -262,7 +262,7 @@ class Trip {
     for (List trip in trips) {
       if (trip[5] > 10000) {
         print(
-            'ID: ${trip[0]}\t\tLocaion: ${trip[1]}\t\tPassengers: ${trip[2]}\t\tAvailable Seats: ${trip[3]}\tDate: ${trip[4]}\tCurrent Price: \$${trip[5]}\t New Price:\$${trip[5] - (trip[5] * 0.2)}');
+            'ID: ${trip[0]}\t\tLocaion: ${trip[1]}\t\tPassengers: ${trip[2]}\t\tAvailable Seats: ${trip[3]}\tDate: ${trip[4]}\tCurrent Price: \$${trip[5]}\t Price after Discount:\$${trip[5] - (trip[5] * 0.2)}');
       }
     }
   }
