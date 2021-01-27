@@ -238,7 +238,7 @@ class Trip {
   }
 
   void reserveTrip() {
-    stdout.write('Trip ID you want to reserve');
+    stdout.write('Trip ID you want to reserve: ');
     id = int.parse(stdin.readLineSync());
     if (trips[id - 1][3] == 0) {
       print('Sorry there are no available seats in this Trip');
