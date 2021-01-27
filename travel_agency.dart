@@ -223,7 +223,7 @@ class Trip {
 
   void searchTrip() {
     bool priceExist = false;
-    stdout.write('Price you want to search for');
+    stdout.write('Price you want to search for: ');
     price = double.parse(stdin.readLineSync());
     for (List trip in trips) {
       if (trip[5] == price) {
