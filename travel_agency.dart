@@ -87,8 +87,6 @@ void main() {
         case 8:
           {
             print('');
-            print('Here are the latest 10 Trips');
-            print('');
             trip.latestTrips();
           }
           break;
@@ -255,10 +253,21 @@ class Trip {
   }
 
   void latestTrips() {
-    List latestTrips = trips.skip(trips.length - 10).toList();
-    for (List trip in latestTrips) {
-      print(
-          'ID: ${trip[0]} \t\tLocaion: ${trip[1]}\t\tPassengers: ${trip[2]}\t\tAvailable Seats: ${trip[3]}\t\tDate: ${trip[4]}\t\tPrice: \$${trip[5]}');
+    if (trips.length > 10) {
+      print('Here are the latest 10 Trips');
+      print('');
+      List latestTrips = trips.skip(trips.length - 10).toList();
+      for (List trip in latestTrips) {
+        print(
+            'ID: ${trip[0]} \t\tLocaion: ${trip[1]}\t\tPassengers: ${trip[2]}\t\tAvailable Seats: ${trip[3]}\t\tDate: ${trip[4]}\t\tPrice: \$${trip[5]}');
+      }
+    } else {
+      print('Here are the latest Trips');
+      print('');
+      for (List trip in trips) {
+        print(
+            'ID: ${trip[0]} \t\tLocaion: ${trip[1]}\t\tPassengers: ${trip[2]}\t\tAvailable Seats: ${trip[3]}\t\tDate: ${trip[4]}\t\tPrice: \$${trip[5]}');
+      }
     }
   }
 
