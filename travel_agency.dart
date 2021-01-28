@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main() {
+  List nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   print('');
   print('\t\t\t\t\t*** Welcome to our Travel Agency ***\n');
   // ignore: omit_local_variable_types
@@ -30,74 +31,78 @@ void main() {
     }
     // ignore: omit_local_variable_types
     int choice = int.parse(stdin.readLineSync());
-    switch (choice) {
-      case 1:
-        {
-          print('You have chosen to add a new Trip\n');
-          trip.addTrip();
-          sleep(Duration(seconds: 1));
-          print('Trip has been added');
-        }
-        break;
-      case 2:
-        {
-          print('You have Choosen to Edit a Trip');
-          trip.editTrip();
-        }
-        break;
-      case 3:
-        {
-          print('You have chosen to Delete a Trip\n');
-          sleep(Duration(seconds: 1));
-          trip.deleteTrip();
-          sleep(Duration(seconds: 2));
-        }
-        break;
-      case 4:
-        {
-          print('You have chosen to View the Available Trips\n');
-          sleep(Duration(seconds: 1));
-          print('Here are the Available Trips\n');
-          trip.viewTrips();
-        }
-        break;
-      case 5:
-        {
-          print('You have chosen to Search for a trip\n');
-          trip.searchTrip();
-        }
-        break;
-      case 6:
-        {
-          print('You have chosen to Reserve a trip\n');
-          sleep(Duration(seconds: 1));
-          print('Here are the Available Trips\n');
-          trip.viewTrips();
-          trip.reserveTrip();
-        }
-        break;
-      case 7:
-        {
-          print('You have chosen to view Trips which have Discount\n');
-          sleep(Duration(seconds: 1));
-          trip.discount();
-        }
-        break;
-      case 8:
-        {
-          print('');
-          print('Here are the latest 10 Trips');
-          print('');
-          trip.latestTrips();
-        }
-        break;
-      case 9:
-        {
-          print(
-              'You have chosen to View The total Number of Passenger in all Trips\n');
-          sleep(Duration(seconds: 1));
-          trip.viewPassengers();
-        }
+    if (nums.contains(choice)) {
+      switch (choice) {
+        case 1:
+          {
+            print('You have chosen to add a new Trip\n');
+            trip.addTrip();
+            sleep(Duration(seconds: 1));
+            print('Trip has been added');
+          }
+          break;
+        case 2:
+          {
+            print('You have Choosen to Edit a Trip');
+            trip.editTrip();
+          }
+          break;
+        case 3:
+          {
+            print('You have chosen to Delete a Trip\n');
+            sleep(Duration(seconds: 1));
+            trip.deleteTrip();
+            sleep(Duration(seconds: 2));
+          }
+          break;
+        case 4:
+          {
+            print('You have chosen to View the Available Trips\n');
+            sleep(Duration(seconds: 1));
+            print('Here are the Available Trips\n');
+            trip.viewTrips();
+          }
+          break;
+        case 5:
+          {
+            print('You have chosen to Search for a trip\n');
+            trip.searchTrip();
+          }
+          break;
+        case 6:
+          {
+            print('You have chosen to Reserve a trip\n');
+            sleep(Duration(seconds: 1));
+            print('Here are the Available Trips\n');
+            trip.viewTrips();
+            trip.reserveTrip();
+          }
+          break;
+        case 7:
+          {
+            print('You have chosen to view Trips which have Discount\n');
+            sleep(Duration(seconds: 1));
+            trip.discount();
+          }
+          break;
+        case 8:
+          {
+            print('');
+            print('Here are the latest 10 Trips');
+            print('');
+            trip.latestTrips();
+          }
+          break;
+        case 9:
+          {
+            print(
+                'You have chosen to View The total Number of Passenger in all Trips\n');
+            sleep(Duration(seconds: 1));
+            trip.viewPassengers();
+          }
+      }
+    } else {
+      print('Invalid Choice');
     }
   } while (true);
 }
