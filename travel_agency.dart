@@ -24,7 +24,6 @@ void main() {
     sleep(Duration(seconds: 1));
     stdout.write('What do you want to do today?\n');
     print('');
-    // put the available choices here
     // ignore: omit_local_variable_types
     for (String item in choices) {
       print(item);
