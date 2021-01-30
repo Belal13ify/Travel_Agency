@@ -1,7 +1,6 @@
 import 'dart:io';
 
 void main() {
-  List nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   print('');
   print('\t\t\t\t\t*** Welcome to our Travel Agency ***\n');
   // ignore: omit_local_variable_types
@@ -30,7 +29,6 @@ void main() {
     }
     // ignore: omit_local_variable_types
     int choice = int.parse(stdin.readLineSync());
-    if (nums.contains(choice)) {
       switch (choice) {
         case 1:
           {
@@ -97,10 +95,13 @@ void main() {
             sleep(Duration(seconds: 1));
             trip.viewPassengers();
           }
-      }
-    } else {
-      print('Invalid Choice');
-    }
+          break;
+        default:
+          {
+            print('Invalid Choice');
+          }
+          break;
+      } 
   } while (true);
 }
 
